@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using PharmaPlus.Server.Data;
 using PharmaPlus.Server.Models;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Builder;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,12 +25,16 @@ builder.Services.AddAuthentication()
 
 builder.Services.AddControllersWithViews();
 builder.Services.AddRazorPages();
+builder.Services.AddSwaggerGen();
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
+    app.UseSwagger();
+    app.UseSwaggerUI();
+
     app.UseMigrationsEndPoint();
     app.UseWebAssemblyDebugging();
 }

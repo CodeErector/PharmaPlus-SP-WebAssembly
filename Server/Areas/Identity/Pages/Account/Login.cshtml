@@ -1,0 +1,35 @@
+﻿@page
+@model LoginModel
+@{
+    
+}
+
+<!--Main Container-->
+<div class="container marginLogin">
+    <center><h3 class="mt-5 bordor p-1 d-inline-flex">LOGIN</h3></center>
+    <div class="rounded-4 mt-5 w bgcolor mx-auto p-3">
+        <div class="container">
+            <form id="account" method="post">
+                <h4 class="text-white text-center">PHARMA +</h4>
+                <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+                <input asp-for="Input.Email" placeholder="Email" class="p-2 d-block mw-100 w-100 mt-4 loginInput">
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                <input asp-for="Input.Password" placeholder="Password" class="p-2 d-block mw-100 w-100 mt-3 loginInput">
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                <div class="row mt-4">
+                    <div class="col-8">
+                        <a id="forgot-password" asp-page="./ForgotPassword" class="nav-link text-white ps-0">FORGET PASSWORD...?</a>
+                        <a asp-page="./Register" asp-route-returnUrl="@Model.ReturnUrl" class="nav-link text-white ps-0">DON'T HAVE A ACCOUNT? SIGNUP</a>
+                    </div>
+                    <div class="col-4">
+                        <button id="login-submit" type="submit" class="btn rounded-5 px-4 text-black bg-white float-end">LOGIN</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

@@ -1,0 +1,14 @@
+/* CSS Document specfic */
+
+.font{
+    font-size: 25px;
+    text-align: justify;
+}
+
+.textalign{
+    text-align: right;
+}
+
+.mb{
+    margin-bottom: 10px;
+}

@@ -1,0 +1,45 @@
+﻿@page
+@model RegisterModel
+@{
+    
+}
+
+<!--Main Container-->
+<div class="container">
+    <center><h3 class="mt-5 bordor p-1 d-inline-flex">SIGN UP</h3></center>
+    <form id="registerForm" asp-route-returnUrl="@Model.ReturnUrl" method="post">
+        <div class="row mt-5">
+            <div asp-validation-summary="ModelOnly" class="text-danger" role="alert"></div>
+            <div class="col-md-6 px-5">
+                <input type="text" placeholder="First Name" class="p-2 d-block mw-100 w-100 signinput">
+                <input type="text" placeholder="Last Name" class="p-2 d-block mw-100 w-100 mt-4 signinput">
+                <input asp-for="Input.Email" placeholder="Email" class="p-2 d-block mw-100 w-100 mt-4 signinput">
+                <span asp-validation-for="Input.Email" class="text-danger"></span>
+                <input type="text" placeholder="User Name" class="p-2 d-block mw-100 w-100 mt-4 signinput">
+            </div>
+            <div class="col-md-6 px-5">
+                <input asp-for="Input.Password" placeholder="Password" class="p-2 d-block mw-100 w-100 mt-4 mt-md-0 signinput">
+                <span asp-validation-for="Input.Password" class="text-danger"></span>
+                <input asp-for="Input.ConfirmPassword" placeholder="Confirm Password" class="p-2 d-block mw-100 w-100 mt-4 signinput">
+                <span asp-validation-for="Input.ConfirmPassword" class="text-danger"></span>
+                <input type="text" placeholder="Address" class="p-2 d-block mw-100 w-100 mt-4 signinput">
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-md-6 px-5">
+                <div class="form-check">
+                    <input type="checkbox" name="#" class="form-check-input">
+                    <label for="#" class="form-check-label">I Have Read All the <span class="color"><NavLink href="#" class="nav-link d-inline">TERMS</NavLink></span> and <span class="color"><NavLink href="#" class="nav-link d-inline">CONDITIONS</NavLink></span></label>
+                </div>
+                <label class="mt-4">Already A Member?&nbsp;</label><span class="color"><a asp-page="./Login" class="nav-link d-inline">LOGIN</a></span>
+            </div>
+            <div class="col-md-6 px-5">
+                <input id="registerSubmit" type="submit" class="btn bgcolor rounded-5 px-5 text-white float-md-end mt-4" value="SignUp">
+            </div>
+        </div>
+    </form>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

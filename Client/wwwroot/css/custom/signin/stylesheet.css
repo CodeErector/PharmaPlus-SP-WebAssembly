@@ -1,0 +1,23 @@
+/* CSS Document specific */
+
+.signinput{
+    background-color: white !important;
+    border: none;
+    border-bottom: thin solid #212529 !important;
+}
+
+.signinput:focus {
+    outline: none !important;
+}
+
+.signinput[placeholder]::-webkit-input-placeholder {
+    color: #212529 !important;
+}
+
+.nav-link:hover, .nav-link.active{
+    color: #2C9E5A !important;
+}
+
+*{
+    text-transform: none !important;
+}

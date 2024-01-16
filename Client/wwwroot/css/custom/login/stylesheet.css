@@ -1,0 +1,67 @@
+/* CSS Document Main */
+
+/* hex Value color->#5ED28D/hover->#2C9E5A */
+.bordor {
+    border-bottom: medium solid #5ED28D;
+}
+
+.bgcolor {
+    background-color: #5ED28D;
+}
+
+.color {
+    color: #5ED28D;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: text-indent 0.2s 0.2s ease;
+    text-indent: -100%;
+    opacity: 1;
+}
+
+* {
+    text-transform: uppercase;
+}
+
+h3 {
+    color: #212529;
+}
+
+.btn:hover {
+    background-color: #2C9E5A;
+}
+
+/* CSS Document specific*/
+
+.w {
+    max-width: 500px;
+}
+
+input {
+    border: none;
+    border-bottom: thin solid white;
+    background-color: #5ED28D;
+}
+
+textarea {
+    border: none;
+    border-bottom: thin solid white;
+    background-color: #5ED28D;
+}
+
+input:focus {
+    outline: none;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+[placeholder]::-webkit-input-placeholder {
+    color: white;
+}
+
+.marginLogin{
+    margin-top: 56px;
+    margin-bottom: 50px;
+}

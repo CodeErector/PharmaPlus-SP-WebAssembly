@@ -13,5 +13,6 @@ namespace PharmaPlus.Server.Data
             IOptions<OperationalStoreOptions> operationalStoreOptions) : base(options, operationalStoreOptions)
         {
         }
+        public DbSet<PharmaPlus.Server.Models.Medicine> Medicine { get; set; } = default!;
     }
 }
